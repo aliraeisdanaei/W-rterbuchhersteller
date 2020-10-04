@@ -22,19 +22,19 @@ function menu {
     case $option in 
         1)
             checkExists ngerman
-            ./hersteller.py /usr/share/dict/ngerman wb_ndeutsch
+            python3 ./hersteller.py /usr/share/dict/ngerman wb_ndeutsch
             exit
             ;;
         2)
             checkExists ogerman
-            ./hersteller.py /usr/share/dict/ogerman wb_odeutsch
+            python3 ./hersteller.py /usr/share/dict/ogerman wb_odeutsch
 
             exit
             ;;
         3)
             checkExists ngerman
             checkExists ogerman
-            ./hersteller.py /usr/share/dict/ngerman wb_ndeutsch /usr/share/dict/ogerman wb_odeutsch
+            python3 ./hersteller.py /usr/share/dict/ngerman wb_ndeutsch /usr/share/dict/ogerman wb_odeutsch
 
             exit
             ;;
@@ -46,7 +46,7 @@ function menu {
                 exit
             fi
             read -p "Benennen Sie die Wörterbuchdatei: " wdatei
-            ./hersteller.py $dateipfad $wdatei
+            python3 ./hersteller.py $dateipfad $wdatei
             exit
             ;;    
         
@@ -66,24 +66,24 @@ function menu {
 case $1 in
     -n)
         checkExists ngerman
-        ./hersteller.py /usr/share/dict/ngerman wb_ndeutsch
+        python3 ./hersteller.py /usr/share/dict/ngerman wb_ndeutsch
         exit
         ;;
     -o)
         checkExists ogerman
-        ./hersteller.py /usr/share/dict/ogerman wb_odeutsch
+        python3 ./hersteller.py /usr/share/dict/ogerman wb_odeutsch
         exit
         ;;
     -no)
         checkExists ngerman
         checkExists ogerman
-        ./hersteller.py /usr/share/dict/ngerman wb_ndeutsch /usr/share/dict/ogerman wb_odeutsch
+        python3 ./hersteller.py /usr/share/dict/ngerman wb_ndeutsch /usr/share/dict/ogerman wb_odeutsch
         exit
         ;;
     -on)
         checkExists ngerman
         checkExists ogerman
-        ./hersteller.py /usr/share/dict/ngerman wb_ndeutsch /usr/share/dict/ogerman wb_odeutsch
+        python3 ./hersteller.py /usr/share/dict/ngerman wb_ndeutsch /usr/share/dict/ogerman wb_odeutsch
         exit
         ;;
     -d)
@@ -94,7 +94,7 @@ case $1 in
             exit
         fi
         read -p "Benennen Sie die Wörterbuchdatei: " wdatei
-        ./hersteller.py $dateipfad $wdatei        
+        python3 ./hersteller.py $dateipfad $wdatei        
         exit
         ;;    
     *)
